@@ -109,8 +109,9 @@ npm run dev   # → http://localhost:3001
 
 ---
 
-## 次のステップ
+## 公開URL（2026-05-31 デプロイ済み）
 
-1. Vercelへのデプロイ
-   - GitHubリポジトリ作成 → Vercel連携
-   - 環境変数の設定不要（モックのためAPIキー不要）
+| 種別 | URL |
+|---|---|
+| Vercel（デモ公開） | https://knowledge-demo-app.vercel.app/ |
+| GitHub（ソースコード） | https://github.com/Ryo-M-alt/knowledge-demo-app |
