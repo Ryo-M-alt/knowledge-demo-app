@@ -37,7 +37,7 @@
       .rounded-xl { break-inside: avoid; }
       .md\:flex-row { flex-direction: row !important; }
       .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
-      .md\:mb-20 { margin-bottom: 5rem !important; }
+      .md\:mb-14 { margin-bottom: 3.5rem !important; }
       .md\:py-16 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
       .bg-clip-text.text-transparent { -webkit-background-clip: initial !important; background-clip: initial !important; color: #2563EB !important; -webkit-text-fill-color: #2563EB !important; }
     }
@@ -53,53 +53,53 @@
 
 <!-- HERO -->
 <div class="text-center mb-8 md:mb-10">
-  <div class="inline-flex items-center gap-2 bg-ads-accent/10 text-ads-accent-light px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-    <i data-lucide="brain" class="w-4 h-4"></i>ツール設計
-  </div>
-  <h1 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-6">
+  <img src="images/title.png" alt="認知の消費を、極限まで下げる" class="mx-auto w-full max-w-xl mb-6">
+  <h1 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
     認知の消費を、<br class="md:hidden"><span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">極限まで下げる</span>
   </h1>
-  <p class="text-lg text-ads-muted max-w-xl mx-auto leading-relaxed">
-    気づきは多忙な中で生まれる。しかし「書き残す」ための推敲が、知識蓄積の最大の壁だった。<br>ひとことで言うと ──
+  <p class="text-base text-ads-muted max-w-xl mx-auto">
+    気づきは多忙な中で生まれる。しかし「書き残す」ための推敲が、知識蓄積の最大の壁だった。
   </p>
 </div>
 
-<!-- ONE-PAGE SUMMARY -->
-<div class="bg-ads-surface border border-ads-border rounded-2xl p-6 md:p-10 mb-6">
-  <div class="text-center mb-8">
-    <p class="text-xl md:text-2xl font-black text-slate-900 mb-2">「<span class="text-ads-accent-light">話す</span>」と「<span class="text-ads-accent-light">承認する</span>」だけで、知識が蓄積される</p>
-    <p class="text-sm text-ads-muted">推敲・整理・プライバシー確認・構造化 ── それ以外はすべてシステムが担う</p>
-  </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-    <div class="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
-      <div class="inline-flex items-center gap-1.5 bg-red-500/10 text-red-600 px-3 py-1 rounded-full text-xs font-bold mb-4"><i data-lucide="x-circle" class="w-3.5 h-3.5"></i>従来のメモ・日誌</div>
-      <div class="space-y-2.5">
-        <div class="flex items-center gap-2 text-sm text-red-700"><i data-lucide="pencil" class="w-4 h-4 flex-shrink-0"></i><span>何を書くか考える</span></div>
-        <div class="flex items-center gap-2 text-sm text-red-700"><i data-lucide="edit-3" class="w-4 h-4 flex-shrink-0"></i><span>文章を推敲する</span></div>
-        <div class="flex items-center gap-2 text-sm text-red-700"><i data-lucide="tag" class="w-4 h-4 flex-shrink-0"></i><span>カテゴリを自分で決める</span></div>
-        <div class="flex items-center gap-2 text-sm text-red-700"><i data-lucide="folder" class="w-4 h-4 flex-shrink-0"></i><span>整理・保存する</span></div>
-      </div>
-      <div class="mt-4 pt-3 border-t border-red-500/15 flex items-center gap-2 text-xs text-red-600/70">
-        <i data-lucide="battery-low" class="w-3.5 h-3.5"></i>認知負荷：高い → 「後で書こう」→ 結局書かない
-      </div>
+<!-- BEFORE / AFTER -->
+<div class="mb-10 md:mb-14">
+  <div class="flex flex-col sm:flex-row items-center gap-4 md:gap-6">
+    <div class="w-full sm:flex-1">
+      <img src="images/before.png" alt="従来の方法：後で書こうと思って忘れる" class="w-full rounded-xl border border-ads-border shadow-sm">
     </div>
-    <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-5">
-      <div class="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 px-3 py-1 rounded-full text-xs font-bold mb-4"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i>このツール</div>
-      <div class="space-y-2.5">
-        <div class="flex items-center gap-2 text-sm text-emerald-700"><i data-lucide="mic" class="w-4 h-4 flex-shrink-0"></i><span>iPhoneに向かって話す</span></div>
-        <div class="flex items-center gap-2 text-sm text-slate-400"><i data-lucide="cpu" class="w-4 h-4 flex-shrink-0 text-slate-300"></i><span class="line-through">推敲する</span><span class="text-xs text-emerald-600 ml-1">← AIが担う</span></div>
-        <div class="flex items-center gap-2 text-sm text-slate-400"><i data-lucide="cpu" class="w-4 h-4 flex-shrink-0 text-slate-300"></i><span class="line-through">整理・分類する</span><span class="text-xs text-emerald-600 ml-1">← AIが担う</span></div>
-        <div class="flex items-center gap-2 text-sm text-emerald-700"><i data-lucide="check-square" class="w-4 h-4 flex-shrink-0"></i><span>承認ボタンを押す（1秒）</span></div>
-      </div>
-      <div class="mt-4 pt-3 border-t border-emerald-500/15 flex items-center gap-2 text-xs text-emerald-600/70">
-        <i data-lucide="battery-full" class="w-3.5 h-3.5"></i>認知負荷：最小 → 多忙な中でも知識が蓄積される
-      </div>
+    <div class="flex-shrink-0">
+      <i data-lucide="arrow-right" class="w-7 h-7 text-ads-accent hidden sm:block"></i>
+      <i data-lucide="arrow-down" class="w-7 h-7 text-ads-accent sm:hidden"></i>
+    </div>
+    <div class="w-full sm:flex-1">
+      <img src="images/after.png" alt="このツール：その場で話すだけで知識が蓄積される" class="w-full rounded-xl border border-ads-border shadow-sm">
     </div>
   </div>
-  <div class="flex items-center gap-4 mb-5">
-    <div class="flex-1 border-t border-ads-border/50"></div>
-    <div class="text-[11px] text-ads-dim font-medium">この設計が生んだ特徴</div>
-    <div class="flex-1 border-t border-ads-border/50"></div>
+</div>
+
+<!-- SUMMARY -->
+<div class="bg-ads-surface border border-ads-border rounded-2xl p-6 md:p-8 mb-10 md:mb-14">
+  <p class="text-xl md:text-2xl font-black text-slate-900 text-center mb-6">
+    「<span class="text-ads-accent-light">話す</span>」と「<span class="text-ads-accent-light">承認する</span>」だけで、知識が蓄積される
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div class="bg-ads-bg border border-ads-border rounded-xl p-5 text-center">
+      <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mx-auto mb-3">
+        <i data-lucide="mic" class="w-7 h-7 text-blue-600"></i>
+      </div>
+      <div class="text-2xl font-black text-blue-600 mb-1">01</div>
+      <div class="font-bold text-slate-900 mb-1">話す</div>
+      <div class="text-sm text-ads-muted">思ったことをiPhoneに向かって話すだけ。推敲不要</div>
+    </div>
+    <div class="bg-ads-bg border border-ads-border rounded-xl p-5 text-center">
+      <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-3">
+        <i data-lucide="check-square" class="w-7 h-7 text-emerald-600"></i>
+      </div>
+      <div class="text-2xl font-black text-emerald-600 mb-1">02</div>
+      <div class="font-bold text-slate-900 mb-1">承認する</div>
+      <div class="text-sm text-ads-muted">AIが整理した内容を4択ボタンで承認。それだけ</div>
+    </div>
   </div>
   <div class="flex flex-wrap justify-center gap-2">
     <div class="flex items-center gap-1.5 bg-white border border-ads-border rounded-full px-3.5 py-1.5 text-xs text-slate-700"><i data-lucide="mic" class="w-3.5 h-3.5 text-blue-500"></i>iPhoneで話すだけ</div>
@@ -108,307 +108,117 @@
     <div class="flex items-center gap-1.5 bg-white border border-ads-border rounded-full px-3.5 py-1.5 text-xs text-slate-700"><i data-lucide="zap" class="w-3.5 h-3.5 text-emerald-500"></i>承認は1タップ</div>
   </div>
 </div>
-<p class="text-center text-ads-muted mb-16 md:mb-20">この設計思想がどこに表れているのか、ひとつずつ見ていきます。</p>
 
+<!-- 設計原則 -->
+<div class="bg-ads-accent/5 border-2 border-ads-accent/20 rounded-2xl p-8 md:p-10 mb-10 md:mb-14 text-center">
+  <div class="flex items-center justify-center gap-3 mb-3">
+    <i data-lucide="target" class="w-6 h-6 text-ads-accent-light"></i>
+    <span class="text-xs font-bold tracking-widest text-ads-accent-light uppercase">設計原則</span>
+  </div>
+  <p class="text-2xl md:text-3xl font-black text-slate-900 mb-3">認知の消費を、<span class="text-ads-accent-light">極限まで</span>下げる</p>
+  <p class="text-sm text-ads-muted max-w-lg mx-auto leading-relaxed">機能・UI・技術のすべての選択において「ユーザーの認知をこれ以上消費させていないか」を問い続けた結果、以下の設計が生まれました。</p>
+</div>
 
-<!-- SECTION 1: 課題 -->
-<section class="mb-16 md:mb-20">
-  <div class="flex items-center gap-3 mb-8">
-    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-red-500/10 flex-shrink-0"><i data-lucide="alert-circle" class="w-5 h-5 text-red-600"></i></div>
-    <h2 class="text-xl md:text-2xl font-bold text-slate-900">知識が蓄積されない本当の理由</h2>
-  </div>
-  <p class="mb-6 leading-relaxed">仕事の中で「これは大事だ」と感じる瞬間は誰にでもあります。しかしその気づきのほとんどは、記録されることなく忘れられます。</p>
-  <p class="mb-8 leading-relaxed">原因は<strong class="text-slate-900">「書くという行為に、認知コストがかかりすぎる」</strong>ことにあります。文章を書くためには「何を伝えるか」を考え、言葉を選び、読み直して直す ── この推敲作業が、多忙な状況では高い壁になります。</p>
-  <div class="bg-ads-surface border border-ads-border rounded-xl p-6 md:p-8 mb-8">
-    <h3 class="text-sm font-bold text-ads-muted text-center mb-6 tracking-wide">知識が残らない悪循環</h3>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0">
-      <div class="flex flex-col items-center w-32 p-3 text-center">
-        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-2"><i data-lucide="lightbulb" class="w-6 h-6 text-amber-600"></i></div>
-        <div class="font-bold text-slate-900 text-sm">気づきが生まれる</div>
-        <div class="text-[11px] text-ads-muted mt-1">多忙な仕事の中で</div>
-      </div>
-      <div class="flex items-center justify-center md:w-10"><i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim hidden md:block"></i><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim md:hidden"></i></div>
-      <div class="flex flex-col items-center w-32 p-3 text-center">
-        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-2"><i data-lucide="clock" class="w-6 h-6 text-red-500"></i></div>
-        <div class="font-bold text-slate-900 text-sm">「後で書こう」</div>
-        <div class="text-[11px] text-ads-muted mt-1">今は忙しいから</div>
-      </div>
-      <div class="flex items-center justify-center md:w-10"><i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim hidden md:block"></i><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim md:hidden"></i></div>
-      <div class="flex flex-col items-center w-32 p-3 text-center">
-        <div class="w-12 h-12 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center mb-2"><i data-lucide="cloud-off" class="w-6 h-6 text-slate-500"></i></div>
-        <div class="font-bold text-slate-900 text-sm">忘れる</div>
-        <div class="text-[11px] text-ads-muted mt-1">時間が経つにつれ</div>
-      </div>
-      <div class="flex items-center justify-center md:w-10"><i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim hidden md:block"></i><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim md:hidden"></i></div>
-      <div class="flex flex-col items-center w-32 p-3 text-center">
-        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-2"><i data-lucide="rotate-ccw" class="w-6 h-6 text-red-500"></i></div>
-        <div class="font-bold text-slate-900 text-sm">同じ失敗を繰り返す</div>
-        <div class="text-[11px] text-ads-muted mt-1">経験が活かされない</div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-red-500/5 border border-red-500/15 rounded-xl p-5">
-    <div class="flex items-start gap-3">
-      <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-red-500/10 flex-shrink-0 mt-0.5"><i data-lucide="info" class="w-4 h-4 text-red-600"></i></div>
-      <div>
-        <p class="font-bold text-red-700 mb-1">問題の本質</p>
-        <p class="text-ads-muted leading-relaxed text-sm">「記録する習慣がない」のではなく、「<strong class="text-slate-800">記録するためのコストが、気づきの価値に見合わないと感じてしまう</strong>」のが問題です。解決策は「意識を高める」ではなく、記録のコストをゼロに近づけることにあります。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECTION 2: 設計原則 -->
-<section class="mb-16 md:mb-20">
-  <div class="flex items-center gap-3 mb-8">
-    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-ads-accent/10 flex-shrink-0"><i data-lucide="compass" class="w-5 h-5 text-ads-accent-light"></i></div>
-    <h2 class="text-xl md:text-2xl font-bold text-slate-900">一つの設計原則がすべてを決めた</h2>
-  </div>
-  <p class="mb-6 leading-relaxed">このツールの設計にあたり、すべての実装判断の出発点となる原則を1つ定めました。</p>
-  <div class="bg-ads-accent/5 border-2 border-ads-accent/20 rounded-2xl p-8 md:p-10 mb-8 text-center">
-    <div class="flex items-center justify-center gap-3 mb-3">
-      <i data-lucide="target" class="w-6 h-6 text-ads-accent-light"></i>
-      <span class="text-xs font-bold tracking-widest text-ads-accent-light uppercase">設計原則</span>
-    </div>
-    <p class="text-2xl md:text-3xl font-black text-slate-900 mb-4">認知の消費を、<span class="text-ads-accent-light">極限まで</span>下げる</p>
-    <p class="text-ads-muted max-w-lg mx-auto leading-relaxed">機能を追加するとき、UIを設計するとき、技術を選択するとき。すべての判断において「<strong class="text-slate-800">ユーザーの認知をこれ以上消費させていないか</strong>」を問い続けました。</p>
-  </div>
-  <p class="mb-6 leading-relaxed">この原則の下では、ユーザーがやることを2つに絞ることが目標になります。</p>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-    <div class="bg-ads-surface border border-ads-border rounded-xl p-6 text-center">
-      <div class="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mx-auto mb-4"><i data-lucide="mic" class="w-8 h-8 text-blue-600"></i></div>
-      <div class="text-3xl font-black text-blue-600 mb-1">01</div>
-      <div class="font-bold text-slate-900 mb-2">話す</div>
-      <div class="text-sm text-ads-muted leading-relaxed">思ったことをiPhoneに向かって話すだけ。推敲も、まとめも、何も考えなくていい</div>
-    </div>
-    <div class="bg-ads-surface border border-ads-border rounded-xl p-6 text-center">
-      <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4"><i data-lucide="check-square" class="w-8 h-8 text-emerald-600"></i></div>
-      <div class="text-3xl font-black text-emerald-600 mb-1">02</div>
-      <div class="font-bold text-slate-900 mb-2">承認する</div>
-      <div class="text-sm text-ads-muted leading-relaxed">AIが整理した内容を確認して、4択ボタンのひとつを押す。それで完了</div>
-    </div>
-  </div>
-  <div class="bg-ads-surface border border-ads-border rounded-xl p-6">
-    <h3 class="text-sm font-bold text-ads-muted text-center mb-5 tracking-wide">それ以外はすべてシステムが担う</h3>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-      <div class="flex flex-col items-center gap-2 p-3 text-center"><div class="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-purple-600"></i></div><div class="text-xs font-medium text-slate-700">文字起こし</div><div class="text-[10px] text-ads-dim">Whisperが自動変換</div></div>
-      <div class="flex flex-col items-center gap-2 p-3 text-center"><div class="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center"><i data-lucide="shield" class="w-5 h-5 text-amber-600"></i></div><div class="text-xs font-medium text-slate-700">プライバシー保護</div><div class="text-[10px] text-ads-dim">二段階で自動検閲</div></div>
-      <div class="flex flex-col items-center gap-2 p-3 text-center"><div class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center"><i data-lucide="sparkles" class="w-5 h-5 text-blue-600"></i></div><div class="text-xs font-medium text-slate-700">要点の抽出</div><div class="text-[10px] text-ads-dim">GeminiAIが構造化</div></div>
-      <div class="flex flex-col items-center gap-2 p-3 text-center"><div class="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center"><i data-lucide="tags" class="w-5 h-5 text-emerald-600"></i></div><div class="text-xs font-medium text-slate-700">タグ付け</div><div class="text-[10px] text-ads-dim">AI+LLMで自動判定</div></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECTION 3: 7つの工夫 -->
-<section class="mb-16 md:mb-20">
-  <div class="flex items-center gap-3 mb-8">
+<!-- 各機能 -->
+<section class="mb-10 md:mb-14">
+  <div class="flex items-center gap-3 mb-6">
     <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-purple-500/10 flex-shrink-0"><i data-lucide="settings" class="w-5 h-5 text-purple-600"></i></div>
-    <h2 class="text-xl md:text-2xl font-bold text-slate-900">工程ごとの認知負荷低減の工夫</h2>
-  </div>
-  <p class="mb-6 leading-relaxed">「認知の消費を極限まで下げる」という原則は、処理の各工程に具体的な設計上の選択をもたらしました。</p>
-  <div class="bg-ads-surface border border-ads-border rounded-xl p-5 mb-8">
-    <div class="text-xs font-bold text-ads-dim text-center mb-4 tracking-wide">処理の全体像</div>
-    <div class="flex flex-wrap items-center justify-center gap-1.5">
-      <div class="flex items-center gap-1.5 bg-blue-500/10 border border-blue-500/20 rounded-lg px-3 py-1.5"><i data-lucide="mic" class="w-3.5 h-3.5 text-blue-600"></i><span class="text-xs font-medium text-blue-700">話す</span></div>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-ads-dim"></i>
-      <div class="flex items-center gap-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-lg px-3 py-1.5"><i data-lucide="wifi" class="w-3.5 h-3.5 text-cyan-600"></i><span class="text-xs font-medium text-cyan-700">自動同期</span></div>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-ads-dim"></i>
-      <div class="flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/20 rounded-lg px-3 py-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-amber-600"></i><span class="text-xs font-medium text-amber-700">二段階検閲</span></div>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-ads-dim"></i>
-      <div class="flex items-center gap-1.5 bg-purple-500/10 border border-purple-500/20 rounded-lg px-3 py-1.5"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-600"></i><span class="text-xs font-medium text-purple-700">AI構造化</span></div>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-ads-dim"></i>
-      <div class="flex items-center gap-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-lg px-3 py-1.5"><i data-lucide="tags" class="w-3.5 h-3.5 text-indigo-600"></i><span class="text-xs font-medium text-indigo-700">タグ二段階判定</span></div>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-ads-dim"></i>
-      <div class="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-lg px-3 py-1.5"><i data-lucide="check-square" class="w-3.5 h-3.5 text-emerald-600"></i><span class="text-xs font-medium text-emerald-700">承認＝分類</span></div>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-ads-dim"></i>
-      <div class="flex items-center gap-1.5 bg-slate-500/10 border border-slate-500/20 rounded-lg px-3 py-1.5"><i data-lucide="database" class="w-3.5 h-3.5 text-slate-600"></i><span class="text-xs font-medium text-slate-700">知識DB</span></div>
-    </div>
+    <h2 class="text-xl md:text-2xl font-bold text-slate-900">各工程の認知負荷低減の工夫</h2>
   </div>
 
   <div class="space-y-4">
 
-    <!-- 工夫1 -->
+    <!-- 1: 音声入力 -->
     <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
       <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
         <div class="w-7 h-7 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">1</div>
         <i data-lucide="mic" class="w-4 h-4 text-blue-600"></i>
         <h3 class="font-bold text-slate-900">音声入力 — 推敲そのものをなくす</h3>
       </div>
-      <div class="px-6 py-5">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div><div class="text-xs font-bold text-red-600 mb-2">文字入力の問題</div><p class="text-sm text-ads-muted leading-relaxed">「何を・どう表現するか」を同時に考える必要があり、<strong class="text-slate-800">思考と執筆が並行する認知負荷がかかる。</strong>多忙な状況ではこの壁が特に高い。</p></div>
-          <div><div class="text-xs font-bold text-emerald-600 mb-2">音声入力の解決</div><p class="text-sm text-ads-muted leading-relaxed">話すことは<strong class="text-slate-800">推敲なしで思考をアウトプットできる唯一の方法。</strong>冗長な話し言葉はWhisperが文字起こしし、要点はAIが抽出する。</p></div>
-        </div>
+      <img src="images/feature-voice.png" alt="音声入力画面" class="w-full block">
+      <div class="px-6 py-4">
+        <p class="text-sm text-ads-muted leading-relaxed">話すことは推敲なしで思考をアウトプットできる唯一の手段。冗長な話し言葉はWhisperが文字起こしし、要点はAIが抽出します。</p>
       </div>
     </div>
 
-    <!-- 工夫2 -->
+    <!-- 2: 追加コンテクスト -->
     <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
       <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
-        <div class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">2</div>
+        <div class="w-7 h-7 rounded-full bg-teal-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">2</div>
+        <i data-lucide="sliders" class="w-4 h-4 text-teal-600"></i>
+        <h3 class="font-bold text-slate-900">追加コンテクスト — 一言で要約精度を高める</h3>
+      </div>
+      <img src="images/context-b.png" alt="追加コンテクスト設定画面" class="w-full block">
+      <div class="px-6 py-4">
+        <p class="text-sm text-ads-muted leading-relaxed">「今日はキックオフMTG」などのコンテクストを一言加えると、AIの要約精度が向上します。任意入力のため、追加しなくても動作します。</p>
+      </div>
+    </div>
+
+    <!-- 3: 自動同期 -->
+    <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
+      <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
+        <div class="w-7 h-7 rounded-full bg-cyan-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">3</div>
         <i data-lucide="wifi" class="w-4 h-4 text-cyan-600"></i>
-        <h3 class="font-bold text-slate-900">集中モード連携 — 「同期しよう」という意識すら不要に</h3>
+        <h3 class="font-bold text-slate-900">集中モード連携 — 「同期しよう」という意識を不要に</h3>
       </div>
       <div class="px-6 py-5">
-        <p class="text-sm text-ads-muted leading-relaxed mb-4">iPhoneとMacBookを別々のデバイスとして使うと「データを転送する」という作業が発生します。このわずかな手間でさえ、行動のハードルになります。</p>
         <div class="bg-cyan-500/5 border border-cyan-500/15 rounded-lg px-4 py-3 flex items-start gap-3">
           <i data-lucide="zap" class="w-4 h-4 text-cyan-600 mt-0.5 flex-shrink-0"></i>
-          <p class="text-sm text-cyan-800 leading-relaxed"><strong>集中モードの切り替えをトリガーに、MacBookが起動すると同時にデータが自動同期されます。</strong>仕事を始めた瞬間に、昨日話した内容がすでにMacBookに届いています。</p>
+          <p class="text-sm text-cyan-800 leading-relaxed">集中モードの切り替えをトリガーに、MacBookが起動すると同時にデータが自動同期されます。「転送する」という作業が不要です。</p>
         </div>
       </div>
     </div>
 
-    <!-- 工夫3 -->
+    <!-- 4: 二段階検閲 -->
     <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
       <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
-        <div class="w-7 h-7 rounded-full bg-amber-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">3</div>
-        <i data-lucide="eye" class="w-4 h-4 text-amber-600"></i>
-        <h3 class="font-bold text-slate-900">検閲は「強調表示」 — 差分を読まずに確認できる</h3>
+        <div class="w-7 h-7 rounded-full bg-amber-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">4</div>
+        <i data-lucide="shield-check" class="w-4 h-4 text-amber-600"></i>
+        <h3 class="font-bold text-slate-900">二段階検閲 — 差分を読まずに確認できる精度へ</h3>
       </div>
-      <div class="px-6 py-5">
-        <p class="text-sm text-ads-muted leading-relaxed mb-5">「修正前」と「修正後」を比較させると読む量が2倍になります。「何が検出されたか」だけを見せる強調表示なら、全文を読み直す必要がありません。</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-          <div class="rounded-lg overflow-hidden border border-red-300">
-            <div class="bg-red-500/10 px-3 py-2 text-xs font-bold text-red-700 flex items-center gap-1.5 border-b border-red-200"><i data-lucide="x" class="w-3.5 h-3.5"></i>比較表示（認知負荷：高）</div>
-            <div class="p-3 bg-white space-y-2">
-              <div class="text-[11px] text-red-600 font-medium">修正前:</div>
-              <div class="text-xs text-slate-700 bg-red-50 rounded p-2 leading-relaxed">昨日、<span class="bg-red-200 px-0.5 rounded">田中部長</span>と<span class="bg-red-200 px-0.5 rounded">ABC社</span>のMTGがあり…</div>
-              <div class="text-[11px] text-emerald-600 font-medium">修正後:</div>
-              <div class="text-xs text-slate-700 bg-emerald-50 rounded p-2 leading-relaxed">昨日、<span class="bg-emerald-200 px-0.5 rounded">[役職者]</span>と<span class="bg-emerald-200 px-0.5 rounded">[取引先]</span>のMTGがあり…</div>
-            </div>
-          </div>
-          <div class="rounded-lg overflow-hidden border border-emerald-300">
-            <div class="bg-emerald-500/10 px-3 py-2 text-xs font-bold text-emerald-700 flex items-center gap-1.5 border-b border-emerald-200"><i data-lucide="check" class="w-3.5 h-3.5"></i>強調表示（認知負荷：低）</div>
-            <div class="p-3 bg-white">
-              <div class="text-[11px] text-slate-500 font-medium mb-2">検出された語句:</div>
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="bg-amber-100 border border-amber-300 text-amber-800 text-[11px] px-2 py-0.5 rounded-full font-medium">田中部長 <span class="text-amber-500">人名</span></span>
-                <span class="bg-amber-100 border border-amber-300 text-amber-800 text-[11px] px-2 py-0.5 rounded-full font-medium">ABC社 <span class="text-amber-500">組織名</span></span>
-              </div>
-              <div class="text-xs text-ads-muted">確認するだけ。修正後の全文を読む必要なし</div>
-            </div>
-          </div>
-        </div>
+      <img src="images/feature-censor.png" alt="検閲・強調表示画面" class="w-full block">
+      <div class="px-6 py-4">
+        <p class="text-sm text-ads-muted leading-relaxed">正規表現 + ローカルLLMの二段階で個人情報を検出。「修正前後の比較」ではなく「検出語句の強調表示のみ」を見せるため、全文を読み直す必要がありません。個人情報はローカルで処理され、クラウドに送られません。</p>
       </div>
     </div>
 
-    <!-- 工夫4 -->
+    <!-- 5: タグ二段階 -->
     <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
       <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
-        <div class="w-7 h-7 rounded-full bg-orange-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">4</div>
-        <i data-lucide="shield-check" class="w-4 h-4 text-orange-600"></i>
-        <h3 class="font-bold text-slate-900">二段階検閲 — 後から手動修正しなくていい精度へ</h3>
-      </div>
-      <div class="px-6 py-5">
-        <p class="text-sm text-ads-muted leading-relaxed mb-5">検閲の見落としがあると後修正が発生します。この「後修正」こそが最大の認知コストです。2つの異なるエンジンで二重実行することで見落としをなくします。</p>
-        <div class="flex flex-col md:flex-row items-stretch gap-3 mb-3">
-          <div class="flex-1 bg-orange-500/5 border border-orange-500/20 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-2"><div class="w-5 h-5 rounded-full bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center">1</div><div class="text-xs font-bold text-orange-700">正規表現 + NER（固有表現認識）</div></div>
-            <p class="text-xs text-ads-muted leading-relaxed">人名・組織名・地名などのパターンをルールベースで確実に捕捉する</p>
-          </div>
-          <div class="flex items-center justify-center px-1"><i data-lucide="plus" class="w-4 h-4 text-ads-dim"></i></div>
-          <div class="flex-1 bg-blue-500/5 border border-blue-500/20 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-2"><div class="w-5 h-5 rounded-full bg-blue-500 text-white text-[10px] font-bold flex items-center justify-center">2</div><div class="text-xs font-bold text-blue-700">ローカルLLM（文脈理解）</div></div>
-            <p class="text-xs text-ads-muted leading-relaxed">ルールで捕捉しにくい文脈上の個人情報（「部長」「同僚」など）も検出</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2 text-xs text-ads-muted bg-ads-surface rounded-lg px-4 py-2 border border-ads-border/50">
-          <i data-lucide="lock" class="w-3.5 h-3.5 text-ads-accent flex-shrink-0"></i>
-          ローカルで処理するため、個人情報はGeminiクラウドAPIに送られない
-        </div>
-      </div>
-    </div>
-
-    <!-- 工夫5: POSレジ着想 -->
-    <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
-      <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
-        <div class="w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">5</div>
-        <i data-lucide="mouse-pointer-click" class="w-4 h-4 text-emerald-600"></i>
-        <h3 class="font-bold text-slate-900">承認と分類を一体化 — POSレジから着想</h3>
-      </div>
-      <div class="px-6 py-5">
-        <p class="text-sm text-ads-muted leading-relaxed mb-5">承認と分類を別の操作にすると2ステップが必要になります。この「もう1ステップ」が離脱を生みます。</p>
-        <div class="bg-amber-500/5 border border-amber-500/15 rounded-lg px-4 py-3 flex items-start gap-3 mb-5">
-          <i data-lucide="lightbulb" class="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0"></i>
-          <div>
-            <p class="text-xs font-bold text-amber-700 mb-1">着想: POSレジの年齢確認ボタン</p>
-            <p class="text-sm text-ads-muted leading-relaxed">酒類購入時のレジで「20歳以上ですか？」の確認と会計ボタンを一体化したUX設計があります。「確認 → 会計」の2ステップを「はい（会計）」の1ステップに集約し、効率と確実性を両立した事例です。このツールでも同じ発想を適用しました。</p>
-          </div>
-        </div>
-        <div class="bg-slate-900 rounded-xl p-5 mb-3">
-          <div class="text-[11px] text-slate-400 text-center mb-4">AIが処理したナレッジの確認画面（実際のUI）</div>
-          <div class="bg-slate-800 rounded-lg p-4 mb-4 text-xs text-slate-300 leading-relaxed">
-            <div class="text-slate-400 text-[10px] mb-2">FINAL TEXT（クラウドへの送信内容）</div>
-            昨日の[役職者]との[取引先]MTGで、要件定義なしに実装を開始した結果、手戻りが発生した。事前の合意形成が重要だと再認識した。
-          </div>
-          <div class="text-[11px] text-slate-400 text-center mb-3">この経験を一言で分類してください ── 押したボタンが承認を兼ねます</div>
-          <div class="grid grid-cols-2 gap-2">
-            <div class="bg-red-900/60 border border-red-700/50 text-red-300 text-xs font-bold py-2.5 rounded-lg text-center">失敗・反省</div>
-            <div class="bg-emerald-900/60 border border-emerald-700/50 text-emerald-300 text-xs font-bold py-2.5 rounded-lg text-center">成功</div>
-            <div class="bg-blue-900/60 border border-blue-700/50 text-blue-300 text-xs font-bold py-2.5 rounded-lg text-center">意思決定</div>
-            <div class="bg-amber-900/60 border border-amber-700/50 text-amber-300 text-xs font-bold py-2.5 rounded-lg text-center">気づき</div>
-          </div>
-        </div>
-        <p class="text-xs text-ads-dim text-center">ボタンを押す = 承認 + 経験タグの付与 が同時に完了</p>
-      </div>
-    </div>
-
-    <!-- 工夫6 -->
-    <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
-      <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
-        <div class="w-7 h-7 rounded-full bg-indigo-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">6</div>
+        <div class="w-7 h-7 rounded-full bg-indigo-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">5</div>
         <i data-lucide="tags" class="w-4 h-4 text-indigo-600"></i>
-        <h3 class="font-bold text-slate-900">タグの二段階付与 — 探す手間も最小化</h3>
+        <h3 class="font-bold text-slate-900">タグの二段階設計 — 探す手間も整理する手間もなくす</h3>
       </div>
-      <div class="px-6 py-5">
-        <p class="text-sm text-ads-muted leading-relaxed mb-5">蓄積した知識は「後で探せる」ことで価値を発揮します。人間とAIで役割を分けた二段階のタグ設計にしました。</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-indigo-500/5 border border-indigo-500/20 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-3"><i data-lucide="user" class="w-4 h-4 text-indigo-600"></i><div class="text-xs font-bold text-indigo-700">人間が付与 — 経験タグ（大分類）</div></div>
-            <div class="flex gap-1.5 flex-wrap mb-2">
-              <span class="bg-red-100 text-red-700 text-[11px] px-2.5 py-1 rounded-full font-medium">失敗・反省</span>
-              <span class="bg-emerald-100 text-emerald-700 text-[11px] px-2.5 py-1 rounded-full font-medium">成功</span>
-              <span class="bg-blue-100 text-blue-700 text-[11px] px-2.5 py-1 rounded-full font-medium">意思決定</span>
-              <span class="bg-amber-100 text-amber-700 text-[11px] px-2.5 py-1 rounded-full font-medium">気づき</span>
-            </div>
-            <p class="text-xs text-ads-muted">承認ボタンと一体化。選ぶのに考えは不要</p>
-          </div>
-          <div class="bg-purple-500/5 border border-purple-500/20 rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-3"><i data-lucide="sparkles" class="w-4 h-4 text-purple-600"></i><div class="text-xs font-bold text-purple-700">AIが付与 — ハッシュタグ（細分類）</div></div>
-            <div class="flex gap-1.5 flex-wrap mb-2">
-              <span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-full">#要件定義</span>
-              <span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-full">#プロジェクト管理</span>
-              <span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-full">#コミュニケーション</span>
-            </div>
-            <p class="text-xs text-ads-muted">Geminiが自動生成。人間はタグを考えなくていい</p>
-          </div>
-        </div>
+      <img src="images/feature-tags.png" alt="タグ・知識DB画面" class="w-full block">
+      <div class="px-6 py-4">
+        <p class="text-sm text-ads-muted leading-relaxed">人間は経験タグ（4択）を選ぶだけ。AIが内容に応じたハッシュタグを自動生成し、類似タグはローカルLLMが事前チェックします。後から「タグを整理しよう」という作業が発生しません。</p>
       </div>
     </div>
 
-    <!-- 工夫7 -->
+    <!-- 6: Gemini送信と自動タグ付け -->
     <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
       <div class="flex items-center gap-3 px-6 py-4 border-b border-ads-border/50">
-        <div class="w-7 h-7 rounded-full bg-violet-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">7</div>
-        <i data-lucide="git-merge" class="w-4 h-4 text-violet-600"></i>
-        <h3 class="font-bold text-slate-900">タグの二段階判定 — 後から整理しなくていい品質へ</h3>
+        <div class="w-7 h-7 rounded-full bg-violet-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">6</div>
+        <i data-lucide="sparkles" class="w-4 h-4 text-violet-600"></i>
+        <h3 class="font-bold text-slate-900">Gemini送信と自動タグ付け — 後から整理しなくていい品質へ</h3>
       </div>
-      <div class="px-6 py-5">
-        <p class="text-sm text-ads-muted leading-relaxed mb-5">AIが生成したタグが類似・重複すると「#要件定義」と「#要件定義書」が混在し、後で手動整理が必要になります。これを防ぐためタグ付けも二段階で行います。</p>
-        <div class="flex flex-col gap-3">
-          <div class="flex items-start gap-3 bg-ads-surface border border-ads-border/70 rounded-lg p-4">
-            <div class="w-6 h-6 rounded-full bg-purple-500 text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</div>
-            <div><div class="text-xs font-bold text-slate-900 mb-1">Geminiへの指示に既存タグを渡す</div><p class="text-xs text-ads-muted leading-relaxed">「すでに使われているタグ一覧」をプロンプトに含め、既存タグを優先使用させ、不必要な新タグの作成を抑制します</p></div>
-          </div>
-          <div class="flex justify-center"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
-          <div class="flex items-start gap-3 bg-ads-surface border border-ads-border/70 rounded-lg p-4">
-            <div class="w-6 h-6 rounded-full bg-violet-500 text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</div>
-            <div><div class="text-xs font-bold text-slate-900 mb-1">Gemini出力後にローカルLLMで重複・類似を判定</div><p class="text-xs text-ads-muted leading-relaxed">新タグが提案された場合、ローカルLLMが既存タグとの類似度を評価。「似たタグがある場合はユーザーに確認」という安全弁として機能します</p></div>
+      <div class="px-6 py-5 space-y-3">
+        <div class="flex items-start gap-3 bg-ads-bg border border-ads-border/70 rounded-lg p-4">
+          <div class="w-6 h-6 rounded-full bg-purple-500 text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</div>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-1">既存タグをプロンプトに含めてGeminiへ送信</div>
+            <p class="text-xs text-ads-muted leading-relaxed">「すでに使われているタグ一覧」をプロンプトに含め、既存タグを優先使用させることで不必要な新タグの生成を抑制します</p>
           </div>
         </div>
-        <div class="mt-4 flex items-center gap-2 text-xs text-emerald-700 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-4 py-2.5">
+        <div class="flex justify-center"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
+        <div class="flex items-start gap-3 bg-ads-bg border border-ads-border/70 rounded-lg p-4">
+          <div class="w-6 h-6 rounded-full bg-violet-500 text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</div>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-1">ローカルLLMが重複・類似タグを判定</div>
+            <p class="text-xs text-ads-muted leading-relaxed">新タグが提案された場合、ローカルLLMが既存タグとの類似度を評価。「#要件定義」と「#要件定義書」のような混在を事前に防ぎます</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-4 py-2.5">
           <i data-lucide="check-circle" class="w-3.5 h-3.5 flex-shrink-0"></i>
           後から「タグが散らかっているから整理しよう」という作業が発生しない
         </div>
@@ -418,47 +228,16 @@
   </div>
 </section>
 
-
-<!-- SECTION 4: まとめフロー -->
+<!-- レポート出力 -->
 <section>
-  <div class="flex items-center gap-3 mb-8">
-    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-ads-accent/10 flex-shrink-0"><i data-lucide="check-circle" class="w-5 h-5 text-ads-accent-light"></i></div>
-    <h2 class="text-xl md:text-2xl font-bold text-slate-900">結果として — ユーザーがやることは2つだけ</h2>
+  <div class="flex items-center gap-3 mb-6">
+    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-ads-accent/10 flex-shrink-0"><i data-lucide="file-text" class="w-5 h-5 text-ads-accent-light"></i></div>
+    <h2 class="text-xl md:text-2xl font-bold text-slate-900">蓄積された知識はレポートとして出力できる</h2>
   </div>
-  <p class="mb-8 leading-relaxed">7つの工夫の積み重ねが、最終的に「話す → 承認する」だけというシンプルな体験を生み出しています。</p>
-  <div class="bg-ads-surface border border-ads-border rounded-2xl p-6 md:p-8 mb-8">
-    <div class="space-y-3">
-      <div class="flex items-center gap-4">
-        <div class="w-20 flex-shrink-0 text-right"><span class="inline-flex items-center gap-1 bg-blue-500/10 text-blue-700 text-[11px] font-bold px-2 py-0.5 rounded-full"><i data-lucide="user" class="w-3 h-3"></i>ユーザー</span></div>
-        <div class="flex items-center gap-3 flex-1 bg-blue-500/10 border border-blue-500/20 rounded-lg px-4 py-3"><i data-lucide="mic" class="w-4 h-4 text-blue-600 flex-shrink-0"></i><div><div class="text-sm font-bold text-blue-700">① iPhoneで話す</div><div class="text-xs text-ads-muted">思ったことを声に出すだけ。推敲不要</div></div></div>
-      </div>
-      <div class="flex justify-center ml-20"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
-      <div class="flex items-center gap-4">
-        <div class="w-20 flex-shrink-0 text-right"><span class="inline-flex items-center gap-1 bg-slate-400/10 text-slate-500 text-[11px] font-bold px-2 py-0.5 rounded-full"><i data-lucide="cpu" class="w-3 h-3"></i>自動</span></div>
-        <div class="flex items-center gap-3 flex-1 bg-slate-100 border border-slate-200 rounded-lg px-4 py-3"><i data-lucide="wifi" class="w-4 h-4 text-slate-500 flex-shrink-0"></i><div class="text-sm text-slate-600">MacBook起動と同時に同期 → Whisperで文字起こし</div></div>
-      </div>
-      <div class="flex justify-center ml-20"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
-      <div class="flex items-center gap-4">
-        <div class="w-20 flex-shrink-0 text-right"><span class="inline-flex items-center gap-1 bg-slate-400/10 text-slate-500 text-[11px] font-bold px-2 py-0.5 rounded-full"><i data-lucide="cpu" class="w-3 h-3"></i>自動</span></div>
-        <div class="flex items-center gap-3 flex-1 bg-slate-100 border border-slate-200 rounded-lg px-4 py-3"><i data-lucide="shield" class="w-4 h-4 text-slate-500 flex-shrink-0"></i><div class="text-sm text-slate-600">二段階検閲（正規表現 + ローカルLLM）→ 強調表示で確認</div></div>
-      </div>
-      <div class="flex justify-center ml-20"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
-      <div class="flex items-center gap-4">
-        <div class="w-20 flex-shrink-0 text-right"><span class="inline-flex items-center gap-1 bg-slate-400/10 text-slate-500 text-[11px] font-bold px-2 py-0.5 rounded-full"><i data-lucide="cpu" class="w-3 h-3"></i>自動</span></div>
-        <div class="flex items-center gap-3 flex-1 bg-slate-100 border border-slate-200 rounded-lg px-4 py-3"><i data-lucide="sparkles" class="w-4 h-4 text-slate-500 flex-shrink-0"></i><div class="text-sm text-slate-600">Gemini AIが要点を構造化 + タグ二段階判定</div></div>
-      </div>
-      <div class="flex justify-center ml-20"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
-      <div class="flex items-center gap-4">
-        <div class="w-20 flex-shrink-0 text-right"><span class="inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-700 text-[11px] font-bold px-2 py-0.5 rounded-full"><i data-lucide="user" class="w-3 h-3"></i>ユーザー</span></div>
-        <div class="flex items-center gap-3 flex-1 bg-emerald-500/10 border border-emerald-500/20 rounded-lg px-4 py-3"><i data-lucide="check-square" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i><div><div class="text-sm font-bold text-emerald-700">② 4択ボタンを押す = 承認 + 経験タグ付与</div><div class="text-xs text-ads-muted">失敗・反省 / 成功 / 意思決定 / 気づき</div></div></div>
-      </div>
-      <div class="flex justify-center ml-20"><i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim"></i></div>
-      <div class="flex items-center gap-4">
-        <div class="w-20 flex-shrink-0 text-right"><span class="inline-flex items-center gap-1 bg-slate-400/10 text-slate-500 text-[11px] font-bold px-2 py-0.5 rounded-full"><i data-lucide="cpu" class="w-3 h-3"></i>自動</span></div>
-        <div class="flex items-center gap-3 flex-1 bg-slate-100 border border-slate-200 rounded-lg px-4 py-3"><i data-lucide="database" class="w-4 h-4 text-slate-500 flex-shrink-0"></i><div class="text-sm text-slate-600">知識DBに保存 → 経験タグ × ハッシュタグで即検索</div></div>
-      </div>
-    </div>
+  <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden mb-4">
+    <img src="images/feature-report.png" alt="レポート出力画面" class="w-full block">
   </div>
+  <p class="text-sm text-ads-muted leading-relaxed mb-6">レポートは、PDFまたはマークダウンファイルとして保存して共有できる。</p>
   <div class="text-center bg-gradient-to-b from-ads-accent/5 to-transparent border border-ads-accent/10 rounded-xl p-8 md:p-10">
     <i data-lucide="brain" class="w-8 h-8 text-ads-accent mx-auto mb-4"></i>
     <p class="text-lg font-bold text-slate-900 mb-3">認知負荷を下げることは、習慣を設計することだった</p>
