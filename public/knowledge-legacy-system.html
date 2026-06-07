@@ -234,14 +234,103 @@
     <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-ads-accent/10 flex-shrink-0"><i data-lucide="file-text" class="w-5 h-5 text-ads-accent-light"></i></div>
     <h2 class="text-xl md:text-2xl font-bold text-slate-900">蓄積された知識はレポートとして出力できる</h2>
   </div>
-  <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden mb-4">
+  <p class="text-sm text-ads-muted leading-relaxed mb-4">レポートは、PDFまたはマークダウンファイルとして保存して共有できる。</p>
+  <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden mb-6">
     <img src="images/feature-report.png" alt="レポート出力画面" class="w-full block">
   </div>
-  <p class="text-sm text-ads-muted leading-relaxed mb-6">レポートは、PDFまたはマークダウンファイルとして保存して共有できる。</p>
   <div class="text-center bg-gradient-to-b from-ads-accent/5 to-transparent border border-ads-accent/10 rounded-xl p-8 md:p-10">
     <i data-lucide="brain" class="w-8 h-8 text-ads-accent mx-auto mb-4"></i>
     <p class="text-lg font-bold text-slate-900 mb-3">認知負荷を下げることは、習慣を設計することだった</p>
     <p class="text-ads-muted max-w-lg mx-auto leading-relaxed">「意識を高めて記録する」のではなく、「意識しなくても記録される」仕組みを作る。すべての設計判断は、この一点に向かっていました。</p>
+  </div>
+</section>
+
+<!-- 開発状況 -->
+<section class="mt-10 md:mt-14">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-500/10 flex-shrink-0"><i data-lucide="bar-chart-2" class="w-5 h-5 text-emerald-600"></i></div>
+    <h2 class="text-xl md:text-2xl font-bold text-slate-900">開発状況</h2>
+  </div>
+  <div class="bg-ads-surface border border-ads-border rounded-2xl p-6 md:p-8">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="text-5xl font-black text-emerald-600 leading-none">90<span class="text-2xl font-bold">%</span></div>
+      <div class="flex-1">
+        <div class="h-3 bg-ads-border rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full" style="width:90%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">iPhone同期</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">MacBook転送</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">Stage1検閲（正規表現）</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">Stage2検閲（ローカルLLM）</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">承認UI</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">Gemini連携</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-amber-500/5 border border-amber-500/20 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">重複タグ判定機能</span>
+        <span class="ml-auto text-xs font-medium text-amber-600">バグ有り</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">レポートデータベース</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">キーワード検索機能</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">タグ絞り込み機能</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">データベース編集機能</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">タグ編集・統合機能</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+      <div class="flex items-center gap-2.5 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-3.5 py-2.5">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+        <span class="text-sm text-slate-700">PDF・MD出力機能</span>
+        <span class="ml-auto text-xs font-medium text-emerald-600">完了</span>
+      </div>
+    </div>
+    <div class="flex items-start gap-2.5 bg-blue-500/5 border border-blue-500/15 rounded-lg px-4 py-3">
+      <i data-lucide="flag" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"></i>
+      <p class="text-sm text-ads-muted leading-relaxed">あとは重複タグ判定機能のバグ取りと、全体のUX改善を目指すのみです。</p>
+    </div>
   </div>
 </section>
 
