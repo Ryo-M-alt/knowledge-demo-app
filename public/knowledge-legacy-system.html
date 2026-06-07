@@ -419,6 +419,69 @@
       <i data-lucide="flag" class="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"></i>
       <p class="text-sm text-ads-muted leading-relaxed">あとは重複タグ判定機能のバグ取りと、全体のUX改善を目指すのみです。</p>
     </div>
+
+    <!-- 苦労した点 -->
+    <div class="mt-6">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="flame" class="w-4 h-4 text-rose-500"></i>
+        <span class="text-sm font-bold text-slate-900">開発で苦労した点</span>
+      </div>
+      <div class="space-y-2">
+        <div class="flex items-start gap-3 bg-rose-500/5 border border-rose-500/15 rounded-lg px-4 py-3">
+          <i data-lucide="bug" class="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-0.5">重複タグ判定のプロンプト設計</div>
+            <p class="text-xs text-ads-muted leading-relaxed">ローカルLLMに「意味が近いタグを同一視させる」指示を言語化するのが難しく、モデルの出力が安定しないケースが残っている。現在もチューニング中。</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-rose-500/5 border border-rose-500/15 rounded-lg px-4 py-3">
+          <i data-lucide="wifi-off" class="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-0.5">iPhone–Mac 間の自動同期タイミング</div>
+            <p class="text-xs text-ads-muted leading-relaxed">集中モードの切り替えイベントを確実に拾うまでに試行錯誤が多く、ネットワーク状態によってデータ到達が遅延するエッジケースの対処に時間を要した。</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-rose-500/5 border border-rose-500/15 rounded-lg px-4 py-3">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-0.5">二段階検閲の誤検知チューニング</div>
+            <p class="text-xs text-ads-muted leading-relaxed">正規表現が厳しすぎると無害な語句まで検閲され、緩すぎると個人情報が漏れる。ローカルLLMとの役割分担の境界線を引くまでに何度もルールを書き直した。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- スムーズに進んだ要因 -->
+    <div class="mt-5">
+      <div class="flex items-center gap-2 mb-3">
+        <i data-lucide="rocket" class="w-4 h-4 text-emerald-500"></i>
+        <span class="text-sm font-bold text-slate-900">スムーズに開発が進んだ要因</span>
+      </div>
+      <div class="space-y-2">
+        <div class="flex items-start gap-3 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-4 py-3">
+          <i data-lucide="target" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-0.5">設計原則が一本化されていた</div>
+            <p class="text-xs text-ads-muted leading-relaxed">「認知の消費を極限まで下げる」という判断軸が明確だったため、機能を追加すべきか削るべきかで迷う場面がほとんどなかった。</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-4 py-3">
+          <i data-lucide="clipboard-check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-0.5">機能要件が最初から固まっていた</div>
+            <p class="text-xs text-ads-muted leading-relaxed">「話す・承認する・出力する」という3ステップのフローが開発前に確定していたため、途中で仕様が揺れることなく実装に集中できた。</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-emerald-500/5 border border-emerald-500/15 rounded-lg px-4 py-3">
+          <i data-lucide="notebook-pen" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-0.5">こまめなドキュメント記録</div>
+            <p class="text-xs text-ads-muted leading-relaxed">これから何をどのような手順で開発するか、どこまで終わっているか、実装段階で修正した項目などをドキュメントに詳細に記録し、定期的にセッションをクリアした。常に開発状況の足並みが私とAIで揃っていたから迷いがなかった。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
