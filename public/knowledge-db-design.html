@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>データの取り扱い — KnowledgeLegacySystem</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='8' y='8' width='84' height='84' rx='14' fill='none' stroke='%233B82F6' stroke-width='4'/><circle cx='32' cy='40' r='10' fill='%233B82F6' opacity='0.8'/><circle cx='68' cy='40' r='10' fill='%2360A5FA' opacity='0.8'/><rect x='25' y='62' width='50' height='6' rx='3' fill='%2394A3B8' opacity='0.6'/><rect x='30' y='74' width='40' height='6' rx='3' fill='%2394A3B8' opacity='0.3'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ads: {
+              bg: '#FFFFFF', surface: '#F8FAFC', hover: '#F1F5F9', border: '#E2E8F0',
+              accent: '#3B82F6', 'accent-light': '#2563EB', text: '#1E293B',
+              muted: '#64748B', dim: '#94A3B8',
+            }
+          },
+          fontFamily: { sans: ['"Noto Sans JP"', '"Hiragino Sans"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { border-top: none !important; }
+      .rounded-xl { break-inside: avoid; }
+      .bg-clip-text.text-transparent { -webkit-background-clip: initial !important; background-clip: initial !important; color: #2563EB !important; -webkit-text-fill-color: #2563EB !important; }
+    }
+  </style>
+</head>
+<body class="bg-ads-bg text-slate-600 antialiased leading-relaxed border-t-4 border-ads-accent">
+
+  <div class="no-print max-w-3xl mx-auto px-5 pt-2 flex justify-end">
+    <button onclick="window.print()" class="flex items-center gap-1.5 text-xs text-ads-dim hover:text-ads-accent transition-colors cursor-pointer">
+      <i data-lucide="download" class="w-3.5 h-3.5"></i>PDF
+    </button>
+  </div>
+
+  <main class="max-w-3xl mx-auto px-5 py-10 md:py-16 space-y-14 md:space-y-20">
+
+    <!-- HERO -->
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 bg-blue-500/8 border border-blue-500/20 rounded-full px-4 py-1.5 text-xs font-bold text-blue-700 mb-5">
+        <i data-lucide="database" class="w-3.5 h-3.5"></i>データの取り扱い
+      </div>
+      <h1 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-3">
+        何を、どこに、<span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">なぜ保存するのか</span>
+      </h1>
+      <p class="text-sm text-ads-muted max-w-md mx-auto">
+        データは役割に応じて3つの場所に分けて管理されています。
+      </p>
+    </div>
+
+    <!-- ① 3つの棚 -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest text-ads-dim uppercase text-center mb-6">3つの保存場所</h2>
+      <div class="grid grid-cols-3 gap-3 md:gap-4">
+
+        <div class="flex flex-col items-center gap-3 bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 md:p-6 text-center">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-amber-500/15 flex items-center justify-center">
+            <i data-lucide="inbox" class="w-6 h-6 md:w-7 md:h-7 text-amber-600"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-1">下書き棚</div>
+            <div class="text-[10px] text-amber-700 font-mono">drafts.json</div>
+          </div>
+          <p class="text-[10px] md:text-xs text-ads-muted leading-relaxed">処理中の一時置き場。承認か却下が決まったら消える</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 bg-emerald-500/5 border-2 border-emerald-500/30 rounded-2xl p-4 md:p-6 text-center shadow-sm">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-emerald-500/15 flex items-center justify-center">
+            <i data-lucide="database" class="w-6 h-6 md:w-7 md:h-7 text-emerald-600"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-1">知識棚 <span class="text-emerald-600">★</span></div>
+            <div class="text-[10px] text-emerald-700 font-mono">knowledge.db</div>
+          </div>
+          <p class="text-[10px] md:text-xs text-ads-muted leading-relaxed">承認された知識をすべて蓄積。検索・絞り込みの中心</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 bg-violet-500/5 border border-violet-500/20 rounded-2xl p-4 md:p-6 text-center">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-violet-500/15 flex items-center justify-center">
+            <i data-lucide="tags" class="w-6 h-6 md:w-7 md:h-7 text-violet-600"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-900 mb-1">タグ棚</div>
+            <div class="text-[10px] text-violet-700 font-mono">tag-master.json</div>
+          </div>
+          <p class="text-[10px] md:text-xs text-ads-muted leading-relaxed">全タグを一覧管理。AIが新タグを作るとき参照する</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ② データの流れ -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest text-ads-dim uppercase text-center mb-6">データの流れ</h2>
+
+      <div class="relative">
+        <!-- 縦線（接続） -->
+        <div class="absolute left-[1.625rem] top-10 bottom-10 w-px bg-ads-border hidden sm:block"></div>
+
+        <div class="space-y-3">
+
+          <!-- Step 1 -->
+          <div class="flex items-center gap-4">
+            <div class="w-[3.25rem] flex-shrink-0 flex justify-center">
+              <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center shadow-sm">
+                <i data-lucide="smartphone" class="w-4 h-4 text-white"></i>
+              </div>
+            </div>
+            <div class="flex-1 bg-blue-500/5 border border-blue-500/15 rounded-xl px-4 py-3 flex items-center gap-3">
+              <span class="text-sm font-bold text-slate-900">iPhoneから音声テキストが届く</span>
+            </div>
+          </div>
+
+          <div class="flex justify-start pl-[1.4rem]">
+            <i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim ml-0.5"></i>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-center gap-4">
+            <div class="w-[3.25rem] flex-shrink-0 flex justify-center">
+              <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center shadow-sm">
+                <i data-lucide="shield" class="w-4 h-4 text-white"></i>
+              </div>
+            </div>
+            <div class="flex-1 bg-amber-500/5 border border-amber-500/15 rounded-xl px-4 py-3">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-slate-900">検閲・AI要約（下書き棚で処理）</span>
+                <span class="text-[10px] font-bold text-amber-600 bg-amber-500/10 rounded px-2 py-0.5 ml-2 flex-shrink-0">drafts.json</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-start pl-[1.4rem]">
+            <i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim ml-0.5"></i>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-center gap-4">
+            <div class="w-[3.25rem] flex-shrink-0 flex justify-center">
+              <div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center shadow-sm">
+                <i data-lucide="check-square" class="w-4 h-4 text-white"></i>
+              </div>
+            </div>
+            <div class="flex-1 bg-indigo-500/5 border border-indigo-500/15 rounded-xl px-4 py-3">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold text-slate-900">4択ボタンで承認</span>
+                <div class="flex gap-1">
+                  <span class="text-[10px] bg-rose-500/10 text-rose-700 rounded px-1.5 py-0.5">失敗</span>
+                  <span class="text-[10px] bg-emerald-500/10 text-emerald-700 rounded px-1.5 py-0.5">成功</span>
+                  <span class="text-[10px] bg-blue-500/10 text-blue-700 rounded px-1.5 py-0.5">判断</span>
+                  <span class="text-[10px] bg-amber-500/10 text-amber-700 rounded px-1.5 py-0.5">気づき</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-start pl-[1.4rem]">
+            <i data-lucide="arrow-down" class="w-4 h-4 text-ads-dim ml-0.5"></i>
+          </div>
+
+          <!-- Step 4: 分岐 -->
+          <div class="flex items-start gap-4">
+            <div class="w-[3.25rem] flex-shrink-0 flex justify-center pt-1">
+              <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shadow-sm">
+                <i data-lucide="git-fork" class="w-4 h-4 text-white"></i>
+              </div>
+            </div>
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div class="bg-emerald-500/5 border border-emerald-500/20 rounded-xl px-4 py-3 flex items-center gap-2">
+                <i data-lucide="database" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <div>
+                  <div class="text-[10px] font-bold text-emerald-700">knowledge.db</div>
+                  <div class="text-xs text-slate-700">知識を永続保存</div>
+                </div>
+              </div>
+              <div class="bg-violet-500/5 border border-violet-500/20 rounded-xl px-4 py-3 flex items-center gap-2">
+                <i data-lucide="tags" class="w-4 h-4 text-violet-600 flex-shrink-0"></i>
+                <div>
+                  <div class="text-[10px] font-bold text-violet-700">tag-master.json</div>
+                  <div class="text-xs text-slate-700">新タグを追記</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 知識1件の中身 -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest text-ads-dim uppercase text-center mb-6">知識1件に入るもの</h2>
+      <p class="text-xs text-ads-muted text-center mb-5">承認すると、この形で knowledge.db に保存される</p>
+
+      <!-- カード型イメージ -->
+      <div class="border-2 border-emerald-500/30 rounded-2xl overflow-hidden shadow-sm">
+        <!-- カードヘッダー -->
+        <div class="bg-emerald-500/8 border-b border-emerald-500/20 px-5 py-3 flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-emerald-600"></i>
+          <span class="text-xs font-bold text-emerald-800">知識1件のイメージ</span>
+          <span class="ml-auto text-[10px] text-emerald-600 bg-emerald-500/10 rounded px-2 py-0.5">承認：成功</span>
+        </div>
+
+        <div class="divide-y divide-ads-border/60">
+
+          <!-- 基本 -->
+          <div class="grid grid-cols-[6rem_1fr] md:grid-cols-[8rem_1fr]">
+            <div class="bg-ads-surface px-4 py-3 flex items-start gap-2 border-r border-ads-border/60">
+              <i data-lucide="type" class="w-3.5 h-3.5 text-blue-500 mt-0.5 flex-shrink-0"></i>
+              <span class="text-xs font-bold text-slate-700">タイトル</span>
+            </div>
+            <div class="px-4 py-3 text-xs text-slate-600">フィードバックの伝え方</div>
+          </div>
+
+          <div class="grid grid-cols-[6rem_1fr] md:grid-cols-[8rem_1fr]">
+            <div class="bg-ads-surface px-4 py-3 flex items-start gap-2 border-r border-ads-border/60">
+              <i data-lucide="align-left" class="w-3.5 h-3.5 text-blue-500 mt-0.5 flex-shrink-0"></i>
+              <span class="text-xs font-bold text-slate-700">要約</span>
+            </div>
+            <div class="px-4 py-3 text-xs text-slate-600">直接伝えるより状況を整理してから話すと受け入れられやすい…</div>
+          </div>
+
+          <div class="grid grid-cols-[6rem_1fr] md:grid-cols-[8rem_1fr]">
+            <div class="bg-ads-surface px-4 py-3 flex items-start gap-2 border-r border-ads-border/60">
+              <i data-lucide="tag" class="w-3.5 h-3.5 text-violet-500 mt-0.5 flex-shrink-0"></i>
+              <span class="text-xs font-bold text-slate-700">タグ</span>
+            </div>
+            <div class="px-4 py-3 flex flex-wrap gap-1.5">
+              <span class="text-[11px] bg-violet-500/8 border border-violet-500/20 text-violet-700 rounded-full px-2.5 py-0.5">#ミーティング</span>
+              <span class="text-[11px] bg-violet-500/8 border border-violet-500/20 text-violet-700 rounded-full px-2.5 py-0.5">#コミュニケーション</span>
+            </div>
+          </div>
+
+          <!-- 経験の構造 -->
+          <div class="grid grid-cols-[6rem_1fr] md:grid-cols-[8rem_1fr]">
+            <div class="bg-ads-surface px-4 py-3 flex items-start gap-2 border-r border-ads-border/60">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5 text-indigo-500 mt-0.5 flex-shrink-0"></i>
+              <span class="text-xs font-bold text-slate-700">変化前後</span>
+            </div>
+            <div class="px-4 py-3 flex items-center gap-2 flex-wrap">
+              <span class="text-[11px] bg-rose-500/8 text-rose-700 rounded px-2 py-1">詰め気味に伝えていた</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 text-ads-dim flex-shrink-0"></i>
+              <span class="text-[11px] bg-emerald-500/8 text-emerald-700 rounded px-2 py-1">状況整理してから話す</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-[6rem_1fr] md:grid-cols-[8rem_1fr]">
+            <div class="bg-ads-surface px-4 py-3 flex items-start gap-2 border-r border-ads-border/60">
+              <i data-lucide="lightbulb" class="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span class="text-xs font-bold text-slate-700">学んだこと</span>
+            </div>
+            <div class="px-4 py-3 text-xs text-slate-600">相手の感情状態を先に読むことが、伝わる確率を上げる</div>
+          </div>
+
+          <div class="grid grid-cols-[6rem_1fr] md:grid-cols-[8rem_1fr]">
+            <div class="bg-ads-surface px-4 py-3 flex items-start gap-2 border-r border-ads-border/60">
+              <i data-lucide="book-open" class="w-3.5 h-3.5 text-purple-500 mt-0.5 flex-shrink-0"></i>
+              <span class="text-xs font-bold text-slate-700">教訓</span>
+            </div>
+            <div class="px-4 py-3 text-xs text-slate-600">フィードバックは内容より「タイミングと文脈」が9割</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ なぜ2種類の形式か -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest text-ads-dim uppercase text-center mb-6">なぜ2種類の保存形式があるのか</h2>
+
+      <div class="grid grid-cols-2 gap-4 mb-4">
+
+        <!-- JSON -->
+        <div class="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-5 md:p-6 flex flex-col items-center text-center gap-3">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/15 flex items-center justify-center">
+            <i data-lucide="file-json" class="w-7 h-7 text-amber-600"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-slate-900 mb-1">JSON</div>
+            <div class="text-xs text-amber-700">シンプルなメモ帳</div>
+          </div>
+          <div class="w-full space-y-1.5 text-left">
+            <div class="flex items-center gap-2 text-xs text-slate-600">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0"></i>読み書きが簡単
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-600">
+              <i data-lucide="x" class="w-3.5 h-3.5 text-rose-400 flex-shrink-0"></i>検索が苦手
+            </div>
+          </div>
+          <div class="w-full pt-1 border-t border-amber-500/20 flex flex-wrap justify-center gap-1">
+            <span class="text-[10px] text-amber-700 bg-white border border-amber-500/20 rounded px-2 py-0.5">下書き</span>
+            <span class="text-[10px] text-amber-700 bg-white border border-amber-500/20 rounded px-2 py-0.5">タグ一覧</span>
+          </div>
+        </div>
+
+        <!-- SQLite -->
+        <div class="rounded-2xl border-2 border-emerald-500/30 bg-emerald-500/5 p-5 md:p-6 flex flex-col items-center text-center gap-3">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 flex items-center justify-center">
+            <i data-lucide="hard-drive" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-slate-900 mb-1">SQLite</div>
+            <div class="text-xs text-emerald-700">高性能な整理棚</div>
+          </div>
+          <div class="w-full space-y-1.5 text-left">
+            <div class="flex items-center gap-2 text-xs text-slate-600">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0"></i>高速な検索・絞り込み
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-600">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 flex-shrink-0"></i>壊れにくい安全な書き込み
+            </div>
+          </div>
+          <div class="w-full pt-1 border-t border-emerald-500/20 flex flex-wrap justify-center gap-1">
+            <span class="text-[10px] text-emerald-700 bg-white border border-emerald-500/20 rounded px-2 py-0.5">知識棚（メイン）</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-slate-900 text-white rounded-xl px-5 py-4 text-center text-sm font-bold">
+        一時的に使って捨てるデータは <span class="text-amber-400">JSON</span>、積み上げて検索するデータは <span class="text-emerald-400">SQLite</span>
+      </div>
+    </section>
+
+    <!-- ⑤ タグを分離する理由 -->
+    <section>
+      <h2 class="text-xs font-bold tracking-widest text-ads-dim uppercase text-center mb-2">タグを分離して管理する理由</h2>
+      <p class="text-xs text-ads-muted text-center mb-6">タグと知識を同じ表に混ぜると、3つの問題が起きる</p>
+
+      <!-- NG → OK 比較 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
+        <!-- NG -->
+        <div class="rounded-2xl border-2 border-rose-500/25 overflow-hidden">
+          <div class="bg-rose-500/8 px-4 py-2.5 flex items-center gap-2 border-b border-rose-500/20">
+            <div class="w-5 h-5 rounded-full bg-rose-500 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="x" class="w-3 h-3 text-white"></i>
+            </div>
+            <span class="text-xs font-bold text-rose-700">同じ表に混ぜた場合</span>
+          </div>
+          <!-- 模式テーブル -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-[11px]">
+              <thead>
+                <tr class="bg-ads-surface border-b border-ads-border">
+                  <th class="text-left px-3 py-2 font-bold text-slate-600">知識</th>
+                  <th class="text-left px-3 py-2 font-bold text-rose-600">タグ（各行にバラバラ）</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-ads-border/50">
+                <tr>
+                  <td class="px-3 py-2 text-slate-500">フィードバック…</td>
+                  <td class="px-3 py-2 text-rose-600 font-mono">#ミーティング #要件定義</td>
+                </tr>
+                <tr>
+                  <td class="px-3 py-2 text-slate-500">期待値のすり合わせ…</td>
+                  <td class="px-3 py-2 text-rose-600 font-mono">#MTG #要件定義書</td>
+                </tr>
+                <tr>
+                  <td class="px-3 py-2 text-slate-500">振り返り習慣…</td>
+                  <td class="px-3 py-2 text-rose-600 font-mono">#会議 #振り返り</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- OK -->
+        <div class="rounded-2xl border-2 border-emerald-500/25 overflow-hidden">
+          <div class="bg-emerald-500/8 px-4 py-2.5 flex items-center gap-2 border-b border-emerald-500/20">
+            <div class="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="check" class="w-3 h-3 text-white"></i>
+            </div>
+            <span class="text-xs font-bold text-emerald-700">タグを別ファイルで一元管理</span>
+          </div>
+          <div class="grid grid-cols-2 divide-x divide-emerald-500/15">
+            <div class="p-3">
+              <div class="text-[10px] font-bold text-emerald-700 mb-2">knowledge.db</div>
+              <div class="space-y-1.5 text-[10px] text-slate-500">
+                <div>フィードバック… <span class="text-emerald-700">#ミーティング</span></div>
+                <div>期待値のすり合わせ… <span class="text-emerald-700">#ミーティング</span></div>
+                <div>振り返り習慣… <span class="text-emerald-700">#振り返り</span></div>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="text-[10px] font-bold text-violet-700 mb-2">tag-master.json</div>
+              <div class="flex flex-col gap-1">
+                <span class="text-[10px] bg-violet-500/8 border border-violet-500/20 text-violet-700 rounded px-1.5 py-0.5 w-fit">#ミーティング</span>
+                <span class="text-[10px] bg-violet-500/8 border border-violet-500/20 text-violet-700 rounded px-1.5 py-0.5 w-fit">#振り返り</span>
+                <span class="text-[10px] text-ads-dim">（統一された一覧）</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3つの問題 -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+        <div class="bg-rose-500/5 border border-rose-500/15 rounded-xl p-4 text-center flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-rose-500/10 flex items-center justify-center">
+            <i data-lucide="pencil" class="w-5 h-5 text-rose-500"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">タグ名を変えると<br>全行を書き直す</div>
+          <p class="text-[10px] text-ads-muted leading-relaxed">#要件定義と#要件定義書を統一したいとき、全件書き換えが必要</p>
+        </div>
+
+        <div class="bg-rose-500/5 border border-rose-500/15 rounded-xl p-4 text-center flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-rose-500/10 flex items-center justify-center">
+            <i data-lucide="scan-search" class="w-5 h-5 text-rose-500"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">タグ一覧を取るのに<br>全件スキャンが必要</div>
+          <p class="text-[10px] text-ads-muted leading-relaxed">AIへ渡す「既存タグ一覧」を作るたびに全データを読み直す</p>
+        </div>
+
+        <div class="bg-rose-500/5 border border-rose-500/15 rounded-xl p-4 text-center flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-rose-500/10 flex items-center justify-center">
+            <i data-lucide="git-merge" class="w-5 h-5 text-rose-500"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">表記ゆれが<br>生まれても気づけない</div>
+          <p class="text-[10px] text-ads-muted leading-relaxed">#MTG・#ミーティング・#会議が混在しても誰も検知できない</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section>
+      <div class="text-center bg-gradient-to-b from-blue-500/5 to-transparent border border-blue-500/10 rounded-2xl p-8 md:p-10">
+        <i data-lucide="layers" class="w-8 h-8 text-blue-600 mx-auto mb-4"></i>
+        <p class="text-lg font-bold text-slate-900 mb-2">3つの棚が、それぞれの仕事をする</p>
+        <p class="text-sm text-ads-muted max-w-md mx-auto">ユーザーはデータの行き先を意識しなくても、「話して承認する」だけで知識が正しく蓄積されます。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-3xl mx-auto px-5 pb-10 pt-6 border-t border-ads-border/30">
+    <p class="text-xs text-ads-dim text-center">AI-Driven School の図解ツールで作成</p>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
